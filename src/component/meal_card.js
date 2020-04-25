@@ -52,7 +52,7 @@ export class MealCard extends HTMLElement {
       <div class="card">
         <div class="card-image">
           <figure class="image is-square">
-            <img src="${this._meal.thumbnail}">
+            <img src="${this._meal.thumbnail}" alt="${this._meal.name}">
           </figure>
         </div>
         <div class="card-content">
