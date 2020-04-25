@@ -11,8 +11,7 @@ export class MealService {
   static async filterByCategory(category) {
     const response = await fetch(`${BASE_URL}filter.php?c=${category}`);
     const jsonData = await response.json();
-    const meals = jsonData.meals.map((meal) => Meal.fromJson(meal));
-    return meals;
+    return jsonData.meals.map((meal) => Meal.fromJson(meal));
   }
 
   /**
@@ -23,8 +22,7 @@ export class MealService {
   static async getMealDetail(id) {
     const response = await fetch(`${BASE_URL}lookup.php?i=${id}`);
     const jsonData = await response.json();
-    const meal = Meal.fromJson(jsonData.meals[0]);
-    return meal;
+    return Meal.fromJson(jsonData.meals[0]);
   }
 
   /**
@@ -35,7 +33,6 @@ export class MealService {
   static async searchMealByName(name) {
     const response = await fetch(`${BASE_URL}search.php?s=${name}`);
     const jsonData = await response.json();
-    const meals = jsonData.meals.map((meal) => Meal.fromJson(meal));
-    return meals;
+    return jsonData.meals.map((meal) => Meal.fromJson(meal));
   }
 }
