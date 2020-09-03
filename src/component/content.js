@@ -14,7 +14,6 @@ export class Content extends HTMLElement {
   clearMealList() {
     const mealList = this.querySelector("meal-list");
     if (this.contains(mealList)) {
-      // @ts-ignore
       mealList.clearList();
     }
   }

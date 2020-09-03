@@ -59,7 +59,6 @@ export class Navbar extends HTMLElement {
     searchInputs.forEach((searchInput) => {
       searchInput.addEventListener("submit", (event) => {
         event.preventDefault();
-        // @ts-ignore
         this._emitter.emit("searchValue", event.target.search.value);
       });
     });

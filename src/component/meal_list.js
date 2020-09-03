@@ -64,11 +64,9 @@ export class MealList extends HTMLElement {
           "class",
           "column is-12-tablet is-6-desktop is-3-widescreen"
         );
-        // @ts-ignore
         mealCardElement.meal = meal;
         this.appendChild(mealCardElement);
 
-        // @ts-ignore
         mealCardElement.mealId.on("mealId", this._fn);
       });
     }

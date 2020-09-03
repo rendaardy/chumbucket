@@ -106,9 +106,7 @@ export class Menu extends HTMLElement {
           selectedItems[0].classList.remove("is-active");
         }
 
-        // @ts-ignore
         event.target.classList.add("is-active");
-        // @ts-ignore
         this._emitter.emit("meal", event.target.textContent);
       });
     });
@@ -127,9 +125,7 @@ export class Menu extends HTMLElement {
           selectedButtons[0].classList.remove("is-active");
         }
 
-        // @ts-ignore
         event.target.classList.add("is-active");
-        // @ts-ignore
         this._emitter.emit("meal", event.target.textContent);
       });
     });

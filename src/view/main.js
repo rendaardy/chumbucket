@@ -21,15 +21,12 @@ export const main = () => {
 
   const renderMealList = (mealData) => {
     if (appContentElement.contains(errorMessage)) {
-      // @ts-ignore
       appContentElement.removeElement(errorMessage);
     }
 
     if (appContentElement.contains(mealListElement)) {
-      // @ts-ignore
       appContentElement.clearMealList();
     }
-    // @ts-ignore
     mealListElement.meals = mealData;
     mealListElement.setAttribute("class", "columns is-multiline");
     appContentElement.appendChild(mealListElement);
@@ -37,12 +34,10 @@ export const main = () => {
 
   const renderError = () => {
     if (appContentElement.contains(errorMessage)) {
-      // @ts-ignore
       appContentElement.removeElement(errorMessage);
     }
 
     if (appContentElement.contains(mealListElement)) {
-      // @ts-ignore
       appContentElement.clearMealList();
     }
 
@@ -56,9 +51,7 @@ export const main = () => {
   };
 
   const renderDetail = (meal) => {
-    // @ts-ignore
     appContentElement.clearMealList();
-    // @ts-ignore
     mealDetailElement.meal = meal;
     mainContent.replaceChild(mealDetailElement, appContentElement);
   };
@@ -98,19 +91,15 @@ export const main = () => {
     }
   };
 
-  // @ts-ignore
   navbar.searchMeal.on("searchValue", getMealByName);
 
-  // @ts-ignore
   mainMenu.mealCategory.on("meal", getMealCategory);
 
   if (mealListElement) {
-    // @ts-ignore
     mealListElement.mealId = getMealDetail;
   }
 
   if (mealDetailElement) {
-    // @ts-ignore
     mealDetailElement.goBackEvent = renderContent;
   }
 };
